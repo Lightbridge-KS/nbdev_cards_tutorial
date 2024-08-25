@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nbdev_cards",
+    "section": "",
+    "text": "A deck of cards demo of nbdev based on ideas from Think Python 2nd Edition by Allen B. Downey.",
+    "crumbs": [
+      "nbdev_cards"
+    ]
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "nbdev_cards",
+    "section": "Install",
+    "text": "Install\nFrom TestPyPi: https://test.pypi.org/project/nbdev-cards\nInstall using:\npip install nbdev-cards\nor:\nconda install -c fastai nbdev-cards",
+    "crumbs": [
+      "nbdev_cards"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "nbdev_cards",
+    "section": "How to use",
+    "text": "How to use\nThis lib provides a Card class you can use to create, display, and compare playing cards:\n\nCard(1,3)\n\n3♦️\n\n\nSuits are numbered according to this list:\n\nsuits\n\n['♣️', '♦️', '❤️', '♠️']",
+    "crumbs": [
+      "nbdev_cards"
+    ]
+  },
+  {
+    "objectID": "card.html",
+    "href": "card.html",
+    "title": "card: A basic playing card",
+    "section": "",
+    "text": "suits\n\n['♣️', '♦️', '❤️', '♠️']\n\n\n\nranks[1]\n\n'A'\n\n\n\nsource\n\nCard\n\n Card (suit:int, rank:int)\n\nA playing card\n\n\n\n\nType\nDetails\n\n\n\n\nsuit\nint\nAn index into suits\n\n\nrank\nint\nAn index into ranks\n\n\n\nHere’s an example of creating and displaying a card:\n\nc = Card(suit=1, rank=3)\nc\n\n3♦️\n\n\n\n\nComparison Operator\nNote: @patch help define the class method later from fastcore.utils\n\nsource\n\n\nCard.__gt__\n\n Card.__gt__ (a:__main__.Card)\n\nReturn self&gt;value.\n\nsource\n\n\nCard.__lt__\n\n Card.__lt__ (a:__main__.Card)\n\nReturn self&lt;value.\n\nsource\n\n\nCard.__eq__\n\n Card.__eq__ (a:__main__.Card)\n\nReturn self==value.\n\ntest_eq(Card(suit=1, rank=3), Card(suit=1, rank=3))\n\n\ntest_ne(Card(suit=1, rank=2), Card(suit=1, rank=3))\n\n\nassert Card(suit=3, rank=3) &gt; Card(suit=2, rank=3)\n\n\n\nShow Doc\n\n\n\nstr\n*str(object=’’) -&gt; str str(bytes_or_buffer[, encoding[, errors]]) -&gt; str\nCreate a new string object from the given object. If encoding or errors is specified, then the object must expose a data buffer that will be decoded using the given encoding and error handler. Otherwise, returns the result of object.__str__() (if defined) or repr(object). encoding defaults to sys.getdefaultencoding(). errors defaults to ‘strict’.*\n\n\nTest\n\ntest_eq?\n\nSignature: test_eq(a, b)\nDocstring: `test` that `a==b`\nFile:      ~/.pyenv/versions/3.10.10/lib/python3.10/site-packages/fastcore/test.py\nType:      function\n\n\n\ntest_eq??\n\nSignature: test_eq(a, b)\nSource:   \ndef test_eq(a,b):\n    \"`test` that `a==b`\"\n    test(a,b,equals, cname='==')\nFile:      ~/.pyenv/versions/3.10.10/lib/python3.10/site-packages/fastcore/test.py\nType:      function",
+    "crumbs": [
+      "card: A basic playing card"
+    ]
+  },
+  {
+    "objectID": "deck.html",
+    "href": "deck.html",
+    "title": "deck",
+    "section": "",
+    "text": "source\n\nDeck\n\n Deck ()\n\nA deck of 52 cards, not including jokers\nDouble for loop\n\n[Card(s, r) for s in range(4) for r in range(1, 14)]\n\n[A♣️,\n 2♣️,\n 3♣️,\n 4♣️,\n 5♣️,\n 6♣️,\n 7♣️,\n 8♣️,\n 9♣️,\n 10♣️,\n J♣️,\n Q♣️,\n K♣️,\n A♦️,\n 2♦️,\n 3♦️,\n 4♦️,\n 5♦️,\n 6♦️,\n 7♦️,\n 8♦️,\n 9♦️,\n 10♦️,\n J♦️,\n Q♦️,\n K♦️,\n A❤️,\n 2❤️,\n 3❤️,\n 4❤️,\n 5❤️,\n 6❤️,\n 7❤️,\n 8❤️,\n 9❤️,\n 10❤️,\n J❤️,\n Q❤️,\n K❤️,\n A♠️,\n 2♠️,\n 3♠️,\n 4♠️,\n 5♠️,\n 6♠️,\n 7♠️,\n 8♠️,\n 9♠️,\n 10♠️,\n J♠️,\n Q♠️,\n K♠️]\n\n\nWhen we initially create a deck, all of the cards will be present:\n\ndeck = Deck()\ndeck\n\nA♣️; 2♣️; 3♣️; 4♣️; 5♣️; 6♣️; 7♣️; 8♣️; 9♣️; 10♣️; J♣️; Q♣️; K♣️; A♦️; 2♦️; 3♦️; 4♦️; 5♦️; 6♦️; 7♦️; 8♦️; 9♦️; 10♦️; J♦️; Q♦️; K♦️; A❤️; 2❤️; 3❤️; 4❤️; 5❤️; 6❤️; 7❤️; 8❤️; 9❤️; 10❤️; J❤️; Q❤️; K❤️; A♠️; 2♠️; 3♠️; 4♠️; 5♠️; 6♠️; 7♠️; 8♠️; 9♠️; 10♠️; J♠️; Q♠️; K♠️\n\n\nThat should be 52 cards.\n\ntest_eq(len(deck), 52)\n\nAs a reminder, these are the suits we defined for a Card:\n\nsuits\n\n['♣️', '♦️', '❤️', '♠️']\n\n\nWe can check if, say, the Ace of Clubs is in the deck:\n\nCard(1,1) in deck\n\nTrue\n\n\n\nsource\n\n\nDeck.pop\n\n Deck.pop (idx:int=-1)\n\nRemove one card from the deck\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nidx\nint\n-1\nThe index of the card to remove, defaulting to the last one\n\n\n\n\ndeck = Deck()\ntest_eq(deck.pop(), Card(3,13))  # K♠️\n\nThere are 51 cards left in the deck now.\n\ntest_eq(len(deck), 51)\n\n\nsource\n\n\nDeck.remove\n\n Deck.remove (card:nbdev_cards.card.Card)\n\nRemoves card from the deck or raises exception if it is not there\n\n\n\n\nType\nDetails\n\n\n\n\ncard\nCard\nCard to remove\n\n\n\n\ncard23 = Card(2, 3)\ndeck.remove(card23)\n\nassert card23 not in deck\n\n\nsource\n\n\nDeck.shuffle\n\n Deck.shuffle ()\n\nShuffles the cards in this deck\n\nsource\n\n\ndraw_n\n\n draw_n (n:int, replace:bool=True)\n\nDraw n cards, with replacement iif replace\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nn\nint\n\nnumber of cards to draw\n\n\nreplace\nbool\nTrue\nwhether or not draw with replacement\n\n\n\n\ndraw_n(13, replace=False)\n\n[5❤️, 10♦️, 6♦️, J❤️, 8♦️, A♠️, 5♦️, A♣️, 2♣️, 10❤️, 8❤️, 3♦️, 6❤️]",
+    "crumbs": [
+      "deck"
+    ]
+  }
+]
