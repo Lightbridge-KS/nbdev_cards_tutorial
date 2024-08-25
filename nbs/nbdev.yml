@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "nbdev-cards"
+  site-url: "https://.github.io/nbdev_cards_tutorial"
+  description: ""
+  repo-branch: main
+  repo-url: "https://github.com//nbdev_cards_tutorial"
