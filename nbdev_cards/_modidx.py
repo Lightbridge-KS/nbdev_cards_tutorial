@@ -2,8 +2,8 @@
 
 d = { 'settings': { 'branch': 'main',
                 'doc_baseurl': '/nbdev_cards_tutorial',
-                'doc_host': 'https://.github.io',
-                'git_url': 'https://github.com//nbdev_cards_tutorial',
+                'doc_host': 'https://Lightbridge-KS.github.io',
+                'git_url': 'https://github.com/Lightbridge-KS/nbdev_cards_tutorial',
                 'lib_path': 'nbdev_cards'},
   'syms': { 'nbdev_cards.card': { 'nbdev_cards.card.Card': ('card.html#card', 'nbdev_cards/card.py'),
                                   'nbdev_cards.card.Card.__eq__': ('card.html#card.__eq__', 'nbdev_cards/card.py'),
